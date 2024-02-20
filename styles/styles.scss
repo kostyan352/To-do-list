@@ -1,0 +1,239 @@
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+.createNewTask, .list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 20px 5px 20px;
+    // border: 4px solid black;
+    // border-radius: 10px;
+    width: 40%;
+}
+
+
+.delBtn {
+ margin-left: 10px;   
+}
+
+h1{
+   width: 100%;
+   text-align: center;
+   font-size: 2.5em;
+   color: white;
+}
+
+
+ 
+li {
+    list-style-type: none;
+}
+
+
+
+
+.label{
+    display:block;
+
+}    
+h1{
+    color:white;
+}
+.holder {
+    width:400px;
+    margin:0 auto;
+}
+.checkbox {
+    position:relative;
+    display:block;
+    width:100%;
+    height:60px;
+    
+    overflow:hidden;
+}
+.checkbox:not(:last-child){
+    border-bottom:2px solid white;
+}
+.check {
+    width:50px;
+    height:50px;
+    position:absolute;
+    opacity:0;
+}
+.label span {
+    position:absolute;
+    margin-top:15px;
+}
+.path1{
+    stroke-dasharray:400;
+    stroke-dashoffset:400;
+    transition:.5s all;
+}
+.path2{
+    stroke-dasharray:1800;
+    stroke-dashoffset:1800;
+    transition:.5s all;
+}
+.check:checked + label svg g path {
+    stroke-dashoffset:0;
+}
+ 
+
+/* КНОПКА */
+//** variables
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+//** root
+:root {
+	background: $background;
+	color: $text;
+	font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+	height: 100%;
+}
+
+a {
+	color: inherit;
+	
+	&:hover {
+		color: $button-bg-color;
+	}
+}
+
+//** helper
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+//** button
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+	cursor: pointer;
+	
+	&--primary {
+		background: $button-bg-color;
+		color: $button-text-color;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+		border-radius: 2px;
+		padding: 12px 36px;
+		
+		&:hover {
+			background: darken($button-bg-color, 4%);
+		}
+		
+		&:active {
+			background: $button-bg-color;
+			box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+		}
+	}
+	
+	&--inside {
+		margin-left: -96px;
+	}
+}
+
+//** form
+.form {	
+	&__field {
+		width: 360px;
+		background: #fff;
+		color: $input-text-color;
+		font: inherit;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+		border: 0;
+		outline: 0;
+		padding: 22px 18px;
+	}
+}
+// кнопка удалить
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:500');
+
+* {
+  padding:0;
+  margin:0;
+}
+
+
+.button {
+  padding: 16px 42px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  background: #FC6E51;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transform-style: flat;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(white,.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+  &:focus,
+  &:hover {
+      background: darken(#FC6E51,7%);
+  }
+  &:active {
+    &:after {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}

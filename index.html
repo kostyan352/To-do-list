@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
-</head>
-<body>
-    <h1 style="text-align: center;">TO-DO LIST</h1>
-        <div class="list">
-            <h3>Список задач: 0 задач</h3>
-                <ol class="tasks">
-                </ol>
-                    <button placeholder="Выберите задачу" class="delBtn" hidden type="submit">Удалить</button>
-        </div>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <h1>Список дел</h1>
     <div class="createNewTask">
-        <h3>Добавить задачу</h3>
-            <div>
-                <input class="inputTask" type="text">
-                    <button class="addBtn" type="submit">Добавить</button>
-            </div>
+      <!-- <div class="container">
+          <input placeholder="" class="inputTask" type="text"  />
+          <button class="addBtn" type="submit">Добавить</button>
+      </div> -->
+      <div class="container">
+        <div class="container__item">
+          <form class="form">
+            <input type="email" class="form__field" placeholder="Введите задачу" />
+            <button id="fff" type="button" class="btn btn--primary btn--inside uppercase">Добавить</button>
+          </form>
+        </div>
     </div>
-<script defer src="app.js"></script>
-</body>
+    </div>
+    <div class="list">
+      <h3></h3>
+      <ol class="tasks"></ol>
+      <button placeholder="Выберите задачу" class="delBtn" hidden type="submit">
+        Удалить
+      </button>
+      <a href="#" class="button" id="button">Удалить</a>
+    </div>
+
+    <script defer src="app.js"></script>
+  </body>
 </html>

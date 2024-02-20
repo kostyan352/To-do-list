@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Rubik:500");
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.createNewTask, .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 20px 5px 20px;
+  width: 40%;
+}
+
+.delBtn {
+  margin-left: 10px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.label {
+  display: block;
+}
+
+h1 {
+  color: white;
+}
+
+.holder {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.checkbox {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.checkbox:not(:last-child) {
+  border-bottom: 2px solid white;
+}
+
+.check {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  opacity: 0;
+}
+
+.label span {
+  position: absolute;
+  margin-top: 15px;
+}
+
+.path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: 0.5s all;
+}
+
+.path2 {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+  transition: 0.5s all;
+}
+
+.check:checked + label svg g path {
+  stroke-dashoffset: 0;
+}
+
+/* КНОПКА */
+:root {
+  background: #f5f6fa;
+  color: #9c9c9c;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: #7f8ff4;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #7f8ff4;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background: #6c7ff2;
+}
+.btn--primary:active {
+  background: #7f8ff4;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.btn--inside {
+  margin-left: -96px;
+}
+
+.form__field {
+  width: 360px;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  padding: 16px 42px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+  line-height: 1.25;
+  background: #FC6E51;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color 0.6s ease;
+  overflow: hidden;
+}
+.button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
+  transform-style: flat;
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.button:focus, .button:hover {
+  background: #fb512e;
+}
+.button:active:after {
+  width: 300px;
+  height: 300px;
+}/*# sourceMappingURL=styles.css.map */
